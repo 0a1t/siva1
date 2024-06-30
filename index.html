@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Homepage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Welcome to My Homepage</h1>
+
+  <p id="time"></p>
+
+  <h2>About Me</h2>
+  <p>Name: Sivamalai Chandrasekar</p> 
+  <p>Email: sivamalaic@gmail.com</p>
+  <img src="images/calc.png" alt="calc.png">
+
+  <a href="calculator.html">Go to Calculator</a>
+
+  <script>
+    const timeElement = document.getElementById('time');
+
+    function updateTime() {
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+
+      timeElement.textContent = `The time is ${minutes} minutes after ${hours} hours.`;
+    }
+
+    updateTime(); 
+  </script>
+</body>
+</html>
